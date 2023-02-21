@@ -4,4 +4,4 @@ client= boto3.client('ec2', region_name='us-east-1')
 
 resp =client.describe_instances()
 
-print(resp)
+print(resp['Reservations'][0]['Instances'][0]['InstanceId'])
